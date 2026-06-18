@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1440px;
+}
+:root {
+  /* Dark Mode */
+  --Elements-bg-color: hsl(209, 23%, 22%);
+  --Dark-Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --Text-color: hsl(0, 100%, 100%);
+
+  /* Active / Inactive buttons */
+  --button1-bg: hsl(225, 23%, 24%);
+  --button1-hover: hsl(226, 11%, 37%);
+  --button1-text: white;
+
+  /* Remove button */
+  --Button-bg: hsl(3, 86%, 64%);
+  --Button-hover: hsl(3, 77%, 44%);
+  --Button-text: white;
+}
+
+/* Light Mode Overrides */
+.light-mode {
+  --Text-color: hsl(200, 15%, 8%);
+  --Elements-bg-color: hsl(0, 100%, 100%);
+
+  /* Light page gradient */
+  --Dark-Gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+
+  /* Active / Inactive buttons become white */
+  --button1-bg: hsl(0, 100%, 100%);
+  --button1-hover: hsl(217, 61%, 90%);
+  --button1-text: hsl(200, 15%, 8%);
+
+  /* Remove button stays red */
+  --Button-bg: hsl(3, 86%, 64%);
+  --Button-hover: hsl(3, 77%, 44%);
+  --Button-text: white;
+}
+
+
+
+body {
+  background: var(--Dark-Gradient);
+  min-height: 100vh;
+}
+
+.light-mode .navbar-logo {
+  filter: invert(1);
+}
+
+.bg-element {
+  background-color: var(--Elements-bg-color);
+}
+
+
+.text-color {
+  color: var(--Text-color);
+}
+
+.button1-element {
+  background-color: var(--button1-bg);
+  color: var(--button1-text);
+  border: 1px solid transparent;
+}
+
+.button1-element:hover {
+  background-color: var(--button1-hover);
+}
+
+.light-mode .button1-element:hover {
+  border: 2px solid var(--Button-hover);
+  background-color: var(--Button-text);
+}
+
+.button-element {
+  background-color: var(--Button-bg);
+  color: var(--Button-text);
+  
+}
+
+.button-element:hover {
+  background-color: var(--Button-hover);
+}
+
