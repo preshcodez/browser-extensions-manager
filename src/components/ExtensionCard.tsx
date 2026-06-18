@@ -27,7 +27,10 @@ const ExtensionCard: React.FC<ExtensionCardProps> = ({
               </div>
             </div>
             <div className="flex justify-between">
-              <button className=" border bg-element py-1 px-3 rounded-[15px] cursor-pointer">
+              <button
+                onClick={() => toggleExtension(extension.name)}
+                className="border bg-element py-1 px-3 rounded-[15px] cursor-pointer"
+              >
                 Remove
               </button>
               <div
